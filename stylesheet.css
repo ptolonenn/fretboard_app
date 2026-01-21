@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #b47878;
+    color: white;
+}
+
+
+
+.controls {
+    margin-bottom: 20px;
+}
+
+#fretboard {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    background: #222;
+    width: max-content;
+    user-select: none;
+}
+
+.string {
+    display: flex;
+    border-bottom: 1px solid #555;
+}
+
+.fret {
+    width: 40px;
+    height: 40px;
+    border-right: 1px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.fret.in-scale {
+    background: #4caf50;
+}
+
+.fret.root {
+    background: #ff5722;
+}
+
+.fret:last-child {
+    border-right: none;
+}
+
+.fret:first-child {
+    border-left: 3px solid #fff; /* simulate nut */
+}
+
+/* Fret marker dots inside frets (optional, you can remove if not needed)
+.fret-marker {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #ffcc00;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.fret-marker.double {
+    width: 20px;
+    height: 10px;
+    border-radius: 10px / 50%;
+    top: 5px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+    opacity: 0.8;
+}
+*/
+
+/* Fret number labels container */
+#fret-markers {
+    display: flex;
+    margin-top: 8px;
+    width: max-content;
+    user-select: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ccc;
+    border-top: 1px solid #444;
+    padding-top: 4px;
+}
+
+/* Each fret number aligned to fret width */
+.fret-marker-label {
+    width: 40px; /* same as .fret width */
+    text-align: center;
+}
